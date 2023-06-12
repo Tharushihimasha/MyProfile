@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="POS,Point of Sale,WN,Pos System,Web Pos" name="keywords">
+    <meta content="POS FullStack Developer" name="author">
+    <meta content="Wishal Nipun Siriwaradana" name="owner">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<style>
+    .navbar-brand{
+        font-weight: 700;
+        font-size: 30px;
+        color: #FFFFFF;
+    }
+    .nav-link{
+        color: white;
+
+    }
+    .active{
+        color: darkblue;
+    }
+    body{
+        background: #EAF9F4;
+    }
+    body>main>div:first-child>h2{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    body>main>div:first-child>h5{
+        font-weight: bold;
+        padding: 10px;
+        width: 50%;
+        margin-bottom: 10px;
+        background: rgba(79, 187, 210, 0.7);
+        border: 1px solid #000000;
+        border-radius: 10px;
+    }
+    .form-select{
+        width: 100px;
+    }
+    body>main>div:nth-child(1)>form>div:nth-child(2) {
+        gap: 10px;
+    }
+    body>main>div:nth-child(1)>form>div:nth-child(2) {
+        gap: 10px;
+    }
+    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(1) {
+        background: #D84B5C;
+        border-radius: 5px;
+    }
+    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2),#btnUpdateCustomer {
+        background: #E9A838;
+        border-radius: 5px;
+    }
+    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(3) {
+        background: #0DB46F;
+        border-radius: 5px;
+    }
+    body>main>div:nth-child(2)>button:nth-child(1) {
+        margin-top: 60px;
+        background: #0A7289;
+        border-radius: 5px;
+    }
+    body>main>div:nth-child(2)>button:last-child {
+        margin-bottom: 20px;
+        background: #0D865D;
+        border-radius: 5px;
+    }
+    #customerTable{
+        margin-top: 40px;
+    }
+    p{
+        color: red;
+        visibility: hidden;
+    }
+
+
+</style>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">WN. POS System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item Home">
+                        <a class="nav-link " aria-current="page" href="../Home.html">Home</a>
+                    </li>
+                    <li class="nav-item Customer">
+                        <a class="nav-link active" href="Customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item Items">
+                        <a class="nav-link" href="Items.html">Items</a>
+                    </li>
+                    <li class="nav-item PlaceOrder">
+                        <a class="nav-link" href="Place%20Order.html">Place Order</a>
+                    </li>
+                    <li class="nav-item OrderDetail">
+                        <a class="nav-link" href="Order%20Details.html">Order Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="row container-fluid">
+    <div class="col-9 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+        <h2>Customers</h2>
+        <h5>Search Customers</h5>
+
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="txtSearchCustomer" placeholder="Input Name/NIC/Code Here" >
+            </div>
+           <div class="mb-3 d-flex flex-row">
+               <select class="form-select" aria-label="Default select example">
+                   <option selected>Name</option>
+                   <option value="1">One</option>
+                   <option value="2">Two</option>
+                   <option value="3">Three</option>
+               </select>
+               <button type="button" class="btn btn-primary">Search</button>
+           </div>
+
+            <div class="mb-3">
+                <button type="button" class="btn" id="btnDeleteCustomer" >Delete</button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
+                <button type="button" class="btn" id="btnClear" >Clear</button>
+
+                <!--                update modal start-->
+                <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" >Update Customer</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="txtCustomerUID" class="form-label">Customer ID</label>
+                                    <input class="form-control" type="text" id="txtCustomerUID">
+                                    <p id="lblCustomerIDUValidate">Input Content is not matching Required type 'C001'</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtCustomerUName" class="form-label">Customer Name</label>
+                                    <input class="form-control" type="text" id="txtCustomerUName" multiple>
+                                    <p id="lblCustomerNameUValidate">Input Content is not matching</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtCustomerUAddress" class="form-label">Customer Address</label>
+                                    <input class="form-control" type="text" id="txtCustomerUAddress">
+                                    <p id="lblCustomerAddressUValidate">Input Content is not matching</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtCustomerUSalary" class="form-label">Customer Salary</label>
+                                    <input class="form-control form-control-sm" id="txtCustomerUSalary" type="number">
+                                    <p id="lblCustomerSalaryUValidate">Input Content is not matching</p>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btnUpdateCustomer" type="button" class="btn btn-secondary">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--                update modal End-->
+            </div>
+        </form>
+    </div>
+    <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allCustomerPopUp">
+            + Add Customer
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="allCustomerPopUp" tabindex="-1"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" >Add Customer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+
+
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="txtCustomerID" class="form-label">Customer ID</label>
+                            <input class="form-control" type="text" id="txtCustomerID">
+                            <p id="lblCustomerIDValidate">Input Content is not matching Required type 'C001'</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCustomerName" class="form-label">Customer Name</label>
+                            <input class="form-control" type="text" id="txtCustomerName" multiple>
+                            <p id="lblCustomerNameValidate">Input Content is not matching</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+                            <input class="form-control" type="text" id="txtCustomerAddress">
+                            <p id="lblCustomerAddressValidate" >Input Content is not matching</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
+                            <p id="lblCustomerSalaryValidate">Input Content is not matching</p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btnSaveCustomer" type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="btnAllCustomers" type="button" class="btn btn-success">All Customers</button>
+    </div>
+    <div class="col-12">
+        <table class="table table-hover" id="customerTable">
+            <thead class="table-success ">
+            <tr>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Salary</th>
+            </tr>
+            </thead>
+            <tbody id="tblCustomers">
+
+            </tbody>
+        </table>
+    </div>
+</main>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.37/dist/sweetalert2.all.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<!--Customer Add function-->
+
+<script>
+
+    var customers=[];
+
+    // loadAllCustomers in Table
+    function loadAllCustomer(){
+
+        $("#tblCustomers").empty();
+
+        for(var customer of customers){
+            var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+            $("#tblCustomers").append(row);
+        }
+
+    }
+
+    //disable tab key
+    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on('keydown', function (event) {
+        if (event.key == "Tab") {
+            event.preventDefault();
+        }
+    });
+
+    //Pattern Regex
+    var customerIDPattern = /^(C)[0-9]{3}$/;
+    var customerNamePattern = /^[A-z]{3,20}/;
+    var customerAddressPattern = /^^[A-z0-9 /,]{4,20}/;
+    var customerSalaryPattern = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+    //focus textFields
+    // $("#btnSaveCustomer").attr('disabled',true);
+    // function saveBtnDisable(){
+    //     if( $('#lblCustomerIDValidate')$('#lblCustomerIDValidate').is(':visible') && $('#lblCustomerNameValidate').is(':visible') && $('#lblCustomerAddressValidate').is(':visible') && $('#lblCustomerSalaryValidate').is(':visible')){
+    //
+    //         $("#btnSaveCustomer").attr('disabled',false);
+    //
+    //     }
+    //     else {
+    //         $("#btnSaveCustomer").attr('disabled',true);
+    //     }
+    //
+    // }
+    $("#txtCustomerID").on('keyup', function (event) {
+      //  saveBtnDisable();
+       if(customerIDPattern.test($("#txtCustomerID").val())){
+           $("#txtCustomerID").css('border','2px solid green');
+           $('#lblCustomerIDValidate').css('visibility','hidden');
+
+           if (event.key == "Enter") {
+
+               $("#txtCustomerName").focus();
+           }
+
+
+       }else {
+           $("#txtCustomerID").css('border','2px solid red');
+
+           $("#lblCustomerIDValidate").css('visibility','visible');
+       }
+
+    });
+    $("#txtCustomerName").on('keyup', function (event) {
+      //  saveBtnDisable();
+        if(customerNamePattern.test($("#txtCustomerName").val())){
+            $("#txtCustomerName").css('border','2px solid green');
+            $('#lblCustomerNameValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerAddress").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerName").css('border','2px solid red');
+
+            $("#lblCustomerNameValidate").css('visibility','visible');
+        }
+
+    });
+
+    $("#txtCustomerAddress").on('keyup', function (event) {
+        if(customerAddressPattern.test($("#txtCustomerAddress").val())){
+            $("#txtCustomerAddress").css('border','2px solid green');
+            $('#lblCustomerAddressValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerSalary").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerAddress").css('border','2px solid red');
+
+            $("#lblCustomerAddressValidate").css('visibility','visible');
+        }
+      //  saveBtnDisable();
+    });
+
+    $("#txtCustomerSalary").on('keyup', function (event) {
+        if(customerSalaryPattern.test($("#txtCustomerSalary").val())){
+            $("#txtCustomerSalary").css('border','2px solid green');
+            $('#lblCustomerSalaryValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#btnSaveCustomer").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerSalary").css('border','2px solid red');
+
+            $("#lblCustomerSalaryValidate").css('visibility','visible');
+        }
+     //   saveBtnDisable();
+    });
+
+
+    //Save Customer Event
+    $("#btnSaveCustomer").click(function (){
+
+        let customerID = $("#txtCustomerID").val();
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerSalary = $("#txtCustomerSalary").val();
+
+        var customerObject ={
+
+            id:customerID,
+            name:customerName,
+            address: customerAddress,
+            salary:customerSalary
+        }
+
+        customers.push(customerObject);
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Customer Saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        loadAllCustomer();
+        bindRowClickEvent();
+        loadAllCustomerIDS();
+    });
+
+
+    //Load All Customer Function
+    $("#btnAllCustomers").click(function (){
+
+        loadAllCustomer();
+        bindRowClickEvent();
+
+    });
+
+    //Table Row Click Function
+    function bindRowClickEvent(){
+        $("#tblCustomers>tr").click(function(){
+            let customerId =$(this).children(":eq(0)").text();
+            let customerName =$(this).children(":eq(1)").text();
+            let customerAddress =$(this).children(":eq(2)").text();
+            let customerSalary =$(this).children(":eq(3)").text();
+
+            $("#txtSearchCustomer").val(customerId);
+            $("#txtCustomerUID").val(customerId);
+            $("#txtCustomerUName").val(customerName);
+            $("#txtCustomerUAddress").val(customerAddress);
+            $("#txtCustomerUSalary").val(customerSalary);
+
+        });
+    }
+
+
+    //disable tab key
+    $("#txtCustomerUID,#txtCustomerUName,#txtCustomerUAddress,#txtCustomerUSalary").on('keydown', function (event) {
+        if (event.key == "Tab") {
+            event.preventDefault();
+        }
+    });
+
+    //focus textFields
+    $("#txtCustomerUID").on('keyup', function (event) {
+
+        if(customerIDPattern.test($("#txtCustomerUID").val())){
+            $("#txtCustomerUID").css('border','2px solid green');
+            $('#lblCustomerIDUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerUName").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUID").css('border','2px solid red');
+
+            $("#lblCustomerIDUValidate").css('visibility','visible');
+        }
+    });
+
+
+    $("#txtCustomerUName").on('keyup', function (event) {
+        if(customerNamePattern.test($("#txtCustomerUName").val())){
+            $("#txtCustomerUName").css('border','2px solid green');
+            $('#lblCustomerNameUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerUAddress").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUName").css('border','2px solid red');
+
+            $("#lblCustomerNameUValidate").css('visibility','visible');
+        }
+    });
+
+    $("#txtCustomerUAddress").on('keyup', function (event) {
+        if(customerAddressPattern.test($("#txtCustomerUAddress").val())){
+            $("#txtCustomerUAddress").css('border','2px solid green');
+            $('#lblCustomerAddressUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerUSalary").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUAddress").css('border','2px solid red');
+
+            $("#lblCustomerAddressUValidate").css('visibility','visible');
+        }
+    });
+
+    $("#txtCustomerUSalary").on('keyup', function (event) {
+        if(customerSalaryPattern.test($("#txtCustomerUSalary").val())){
+            $("#txtCustomerUSalary").css('border','2px solid green');
+            $('#lblCustomerSalaryUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#btnUpdateCustomer").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUSalary").css('border','2px solid red');
+
+            $("#lblCustomerSalaryUValidate").css('visibility','visible');
+        }
+    });
+    //Search
+    function searchCustomer(CustomerID){
+        for(let customer of customers){
+            if (customer.id == CustomerID){
+                return customer;
+            }
+        }
+        return null;
+
+    }
+
+    $("#txtSearchCustomer").on('keyup',function (event){
+       if(event.code == "Enter"){
+          let customer=searchCustomer($("#txtSearchCustomer").val())
+           if (customer!==null){
+               $("#txtSearchCustomer").val(customer.id);
+               setUpdateTextfieldValues(customer.id, customer.name, customer.address, customer.salary)
+
+               $("#tblCustomers").empty();
+               var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+               $("#tblCustomers").append(row);
+           }else {
+               alert("customer not found")
+               $("#txtSearchCustomer").val("");
+           }
+       }
+    });
+
+    function setUpdateTextfieldValues(id, name, address, salary) {
+        $("#txtCustomerUID").val(id);
+        $("#txtCustomerUName").val(name);
+        $("#txtCustomerUAddress").val(address);
+        $("#txtCustomerUSalary").val(salary);
+    }
+    //Delete
+    function deleteCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            let indexNumber = customers.indexOf(customer);
+            customers.splice(indexNumber, 1);
+            loadAllCustomer();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $("#btnDeleteCustomer").click(function (){
+        let deleteID = $("#txtSearchCustomer").val();
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteCustomer(deleteID)
+                $("#txtSearchCustomer").val("");
+                Swal.fire(
+                    'Deleted!',
+                    'Customer is deleted.',
+                    'success'
+                )
+
+            }
+        })
+
+
+
+    });
+
+    //Update
+
+    function updateCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            customer.id = $("#txtCustomerUID").val();
+            customer.name = $("#txtCustomerUName").val();
+            customer.address = $("#txtCustomerUAddress").val();
+            customer.salary = $("#txtCustomerUSalary").val();
+            loadAllCustomer();
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    $("#btnUpdateCustomer").click(function () {
+        let customerID = $("#txtCustomerUID").val();
+        let response = updateCustomer(customerID);
+        if (response) {
+            alert("Customer Updated Successfully");
+            setUpdateTextfieldValues()("", "", "", "");
+        } else {
+            alert("Update Failed..!");
+
+        }
+    });
+
+</script>
+<!--Customer Add End function-->
+
+</body>
+</html>

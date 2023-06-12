@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<style>
+
+    body{
+        background-color: black;
+    }
+    main{
+
+        border: 2px solid;
+    }
+    section:first-child>div:first-child,section:nth-child(2)>div:last-child,section:nth-child(3)>div:last-child,
+    section:nth-child(4)>div:last-child,section:nth-child(5)>div:nth-child(3),section:nth-child(5)>div:nth-child(4){
+        background-color: gray;
+        color: white;
+    }
+    section:first-child>div:first-child:hover,section:nth-child(2)>div:last-child:hover,
+    section:nth-child(3)>div:last-child:hover, section:nth-child(4)>div:last-child:hover,
+    section:nth-child(5)>div:nth-child(3):hover,section:nth-child(5)>div:nth-child(4):hover{
+        background-color: #FF6E01;
+        color: white;
+    }
+    div{
+        background-color: #D2D4D5;
+        height: 100px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:40px ;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    div:hover{
+        background-color: #C0C2C5;
+    }
+    section:first-child{
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section:first-child>input{
+        text-align: right;
+        font-size: 50px;
+        height: 100px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    section:first-child>input{
+        height: 100px;
+        color: black;
+        border: none;
+        background-color: #C0C2C5;
+        border-radius: 5px;
+        text-align: right;
+        font-size: 50px;
+    }
+
+</style>
+</head>
+<body class="container">
+<main class="row justify-content-center " style="margin-top: 90px;">
+    <section class="col-12 justify-content-center">
+        <div id="btnClear" class="col-1 m-1">C</div>
+        <input id="txtCalculateBar" type="text" class="col-10" placeholder="0" >
+    </section>
+    <section class="row col-12  justify-content-center">
+        <div id="num7" class="col-3 m-1">7</div>
+        <div id="num8" class="col-3 m-1">8</div>
+        <div id="num9" class="col-3 m-1">9</div>
+        <div id="plus" class="col-2 m-1">+</div>
+    </section>
+
+    <section class="row col-12 justify-content-center">
+        <div id="num4" class="col-3 m-1">4</div>
+        <div id="num5" class="col-3 m-1">5</div>
+        <div id="num6" class="col-3 m-1">6</div>
+        <div id="min" class="col-2 m-1">-</div>
+    </section>
+    <section class="row col-12 justify-content-center">
+        <div id="num1" class="col-3 m-1">1</div>
+        <div id="num2" class="col-3 m-1">2</div>
+        <div id="num3" class="col-3 m-1">3</div>
+        <div id="div" class="col-2 m-1">/</div>
+    </section>
+    <section class="row col-12 justify-content-center">
+        <div id="num0" class="col-3 m-1">0</div>
+        <div id="dot" class="col-3 m-1">.</div>
+        <div id="equal" class="col-3 m-1">=</div>
+        <div id="mul" class="col-2 m-1">*</div>
+    </section>
+</main>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    $('#num1').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"1");
+
+        }
+    );
+    $('#num2').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"2");
+
+        }
+    );
+    $('#num3').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"3");
+
+        }
+    );
+    $('#num4').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"4");
+
+        }
+    );
+    $('#num5').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"5");
+
+        }
+    );
+    $('#num6').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"6");
+
+        }
+    );
+    $('#num7').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"7");
+
+        }
+    );
+    $('#num8').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"8");
+
+        }
+    );
+    $('#num9').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"9");
+
+        }
+    );
+    $('#num0').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"0");
+
+        }
+    );
+    $('#dot').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+".");
+
+        }
+    );
+    $('#btnClear').click(
+        function (){
+            $('#txtCalculateBar').val("")
+
+        }
+    );
+
+    $('#plus').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)+parseInt($('#txtCalculateBar').val()));
+                    temp=0;
+                }
+            );
+
+        }
+    );
+
+    $('#min').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)-parseInt($('#txtCalculateBar').val()));
+                    temp=0;
+                }
+            );
+
+        }
+    );
+
+
+    $('#div').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)/parseInt($('#txtCalculateBar').val()));
+                    temp=0;
+                }
+            );
+
+        }
+    );
+
+    $('#mul').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)*parseInt($('#txtCalculateBar').val()));
+                    temp=0;
+                }
+            );
+
+        }
+    );
+
+</script>
+</body>
+</html>
