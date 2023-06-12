@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Case_02</title>
+    <style>
+        body{
+            background-color: teal;
+        }
+        body>div{
+            width: 350px;
+            height: 350px;
+            border: 15px solid white;
+            border-top: 15px solid crimson;
+            background-color: gray;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        body>div>h1{
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            color: white;
+        }
+        div:hover{
+            transform: rotate(360deg);
+            transition: all 2s;
+        }
+        div:hover>h1{
+            transform: rotate(-360deg);
+            transition: all 2s;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+    <div>
+        <h1>RWED</h1>
+    </div>
+
 </body>
 </html>

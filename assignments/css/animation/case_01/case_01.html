@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Case_01</title>
+    <style>
+        section>div{
+            width: 200px;
+            height: 80px;
+            background-color: black;
+            top: 0;
+            left: 0;
+            border-radius: 25px;
+            animation-name: my-animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+        @keyframes my-animation {
+            0%{
+                background-color: yellow;
+                margin: 0px 0px 0px 0px;
+                transform: rotate(180deg);
+            }
+            25%{
+                background-color:midnightblue ;
+                margin: 0px 0px 0px 1220px;
+                transform: rotate(-180deg);
+            }
+            50%{
+                background-color: orangered;
+                margin: 600px 0px 0px 1220px;
+                transform: rotate(180deg);
+            }
+            75%{
+                background-color:red;
+                margin: 600px 0px 0px 0px;
+                transform: rotate(-180deg);
+            }
+            100%{
+                background-color: deeppink;
+                margin: 0px 0px 0px 0px;
+                transform: rotate(180deg);
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+<section>
+    <div></div>
+</section>
 </body>
 </html>
