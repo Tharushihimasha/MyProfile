@@ -5,6 +5,7 @@
     text-decoration: none;
     border: none;
     outline: none;
+
 }
 h1{
     padding: 40px;
@@ -23,16 +24,31 @@ h1{
     width: 250px;
     height: 50px;
     border: 2px solid red;
-    margin-left: 70px;
+    margin-left: 100px;
     margin-bottom: 30px;
     position: relative;
+    background: #2c3034;
 }
 .basics div>a{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
+    text-align: center;
+    color: #bebebf;
+}
+.animation{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.animation div{
+    width: 250px;
+    height: 50px;
+    border: 2px solid red;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    position: relative;
+    background: #2c3034;
+}
+.animation div>a{
+    text-align: center;
+    color: #bebebf;
 }
 
