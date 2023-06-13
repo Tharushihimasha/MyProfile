@@ -51,4 +51,22 @@ h1{
     text-align: center;
     color: #bebebf;
 }
+.Transitions{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.Transitions div{
+    width: 250px;
+    height: 50px;
+    border: 2px solid red;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    position: relative;
+    background: #2c3034;
+}
+.Transitions div>a{
+    text-align: center;
+    color: #bebebf;
+}
 
