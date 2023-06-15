@@ -309,14 +309,20 @@ h3.my-profession{
 
 }
 /*------------------services--------------------------*/
+.service h1{
+    text-align: center;
+    margin-top: 30px;
+}
 .service .service-div{
     width: 500px;
-    height: 700px;
+    height: 600px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
     flex-direction: row;
     align-items: center;
+    margin-left: 100px;
+    padding-top: 100px;
 
 }
 .service-div div{
