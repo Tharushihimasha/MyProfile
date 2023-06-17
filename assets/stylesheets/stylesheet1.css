@@ -95,6 +95,7 @@ section{
     justify-content: center;
     background-color: snow;
     min-height: 100vh;
+    position: relative;
 }
 h3.hello{
     font-size: 28px;
@@ -215,6 +216,22 @@ h3.my-profession{
     top: 20px;
     display: none;
 }
+.whatsapp-icon{
+    height: 50px;
+    width: 50px;
+    background-color: #0a53be;
+    position: relative;
+}
+/*.whatsapp-icon a{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.whatsapp-icon a i{
+    font-size: 200px;
+}*/
+
 /*--------------------------------------------------------about me-------------*/
 .about{
     background-color: antiquewhite;
@@ -529,6 +546,13 @@ h3.my-profession{
 #detailsUl li{
     list-style: none;
 }
+#detailsUl li:hover{
+    color: #cd6133;
+}
+#detailsUl li:hover a{
+    color:  #cd6133;
+}
+
 .my-details{
     padding-right: 150px;
 }
