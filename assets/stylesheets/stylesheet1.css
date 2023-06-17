@@ -490,6 +490,9 @@ h3.my-profession{
     margin-right: 40px;
     top: 200px;
 }
+.project-box{
+    border: 4px solid #EE5A24;
+}
 .project-box img{
     width: 500px;
     transition: .5s ease;
