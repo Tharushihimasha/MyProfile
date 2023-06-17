@@ -14,13 +14,13 @@ header {
     border: 1px solid black;
     position: fixed;
     z-index: 10;
-    background-color: #4b4b4b;
+    background-color: black;
 }
 section{
     min-height: 100vh;
     padding: 70px 50px 40px 70px;
     background: #1f242d;
-    color: white;
+    color: black;
     position: relative;
 }
 .nav{
@@ -41,7 +41,7 @@ section{
 
 }
 .nav li>a:hover{
-    color: burlywood;
+    color: #EE5A24;
 }
 
 .nav  i{
@@ -71,8 +71,8 @@ section{
     position: absolute;
     width: 20px;
     height: 20px;
-    border-bottom: 5px solid #006266;
-    border-left: 5px solid #006266;
+    border-bottom: 5px solid #EE5A24;
+    border-left: 5px solid #EE5A24;
     left: 0;
     bottom: 0;
 }
@@ -81,8 +81,8 @@ section{
     position: absolute;
     width: 20px;
     height: 20px;
-    border-top: 5px solid burlywood;
-    border-right: 5px solid burlywood;
+    border-top: 5px solid #EE5A24;
+    border-right: 5px solid #EE5A24;
     top: 0;
     right: 0;
 }
@@ -93,7 +93,8 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1e272e;
+    background-color: snow;
+    min-height: 100vh;
 }
 h3.hello{
     font-size: 28px;
@@ -111,7 +112,7 @@ h3.my-profession{
 
 }
 .typing{
-    color: #ec1839;
+    color: #EE5A24;
 }
 
 .home-page p{
@@ -131,8 +132,8 @@ h3.my-profession{
     position: absolute;
     height: 80px;
     width: 80px;
-    border-bottom: 8px solid #218c74;
-    border-right: 8px solid burlywood;
+    border-bottom: 8px solid #EE5A24;
+    border-right: 8px solid #EE5A24;
     right: 47px;
     bottom: -15px;
 }
@@ -141,8 +142,8 @@ h3.my-profession{
     position: absolute;
     height: 80px;
     width: 80px;
-    border-left: 8px solid burlywood;
-    border-top: 8px solid burlywood;
+    border-left: 8px solid #EE5A24;
+    border-top: 8px solid #EE5A24;
     left: 55px;
     top: -20px;
 }
@@ -164,13 +165,13 @@ h3.my-profession{
     border: 2px solid #cd6133;
     border-radius: 50%;
     font-size: 2px;
-    color: #ec1839;
+    color: #EE5A24;
     margin-right: 5px;
     margin-bottom: 10px;
     transition: 0.03s;
 }
 .social-media:hover{
-    background-color: #cd6133;
+    background-color: #EE5A24;
 }
 
 .social-media .fa-brands{
@@ -183,8 +184,11 @@ h3.my-profession{
     right: 0;
     margin: auto;
     font-size: 20px;
+    color: #EE5A24;
 }
-
+.social-media .fa-brands:hover{
+    color: #bebebf;
+}
 
 .btn{
     font-size: 14px;
@@ -197,7 +201,7 @@ h3.my-profession{
     display: inline-block;
     top:50px;
     white-space: nowrap;
-    background-color: burlywood;
+    background-color: #EE5A24;
     transition: all 0.3s ease;
 }
 .btn:hover{
@@ -205,7 +209,7 @@ h3.my-profession{
 }
 .menu{
     font-size: 30px;
-    color: white;
+    background-color: white;
     position: absolute;
     left: 500px;
     top: 20px;
@@ -213,20 +217,22 @@ h3.my-profession{
 }
 /*--------------------------------------------------------about me-------------*/
 .about{
-    background-color: black;
+    background-color: antiquewhite;
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center;
+    min-height: 50vh;
+
 }
 .about-img{
-    padding-right: 100px;
+    padding-top: 20px;
 }
 .about-img img{
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 5px solid #cd6133;
+    border: 5px solid #EE5A24;
     box-shadow: 2px 2px 3px black;
 }
 .heading{
@@ -245,11 +251,17 @@ h3.my-profession{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.my-content{
+    padding-left: 150px;
+}
 /*----------------------------skills----------------------------*/
 .skills{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #3d3d3d;
+    min-height: 50vh;
+    color: #bebebf;
 }
 /*.skills div:first-child{
     margin-right: 150px;
@@ -257,7 +269,7 @@ h3.my-profession{
 .skills h3{
     text-align: left;
     font-size: 30px;
-    color: #cd6133;
+    color: #EE5A24;
     margin-bottom: 20px;
 }
 .skills h1{
@@ -268,7 +280,7 @@ h3.my-profession{
 }
 .big{
     font-size: 80px;
-    color: firebrick;
+    color: #EE5A24;
 }
 .skills p{
     margin-left: 50px;
@@ -300,7 +312,7 @@ h3.my-profession{
 
 }
 .skills-img i:hover{
-    color: burlywood;
+    color: #EE5A24;
     transform: scale(1.1);
 }
 .skills-img h5{
@@ -308,7 +320,14 @@ h3.my-profession{
     left: 60px;
 
 }
+.skills-menu{
+    padding-left: 100px;
+    padding-top: 20px;
+}
 /*------------------services--------------------------*/
+.service{
+    background-color: snow;
+}
 .service h1{
     text-align: center;
     margin-top: 30px;
@@ -328,7 +347,7 @@ h3.my-profession{
 .service-div div{
     width: 200px;
     height: 200px;
-    background-color: black;
+    background-color: #3d3d3d;
     position: relative;
     border-radius: 10px;
     margin-left: 150px;
@@ -340,7 +359,7 @@ h3.my-profession{
     transition: 0.2s;
     transform: scale(1.1);
     text-shadow: -2px 1px 5px white;
-    border: 2px solid burlywood;
+    border: 2px solid #EE5A24;
 }
 
 .service-div div::before {
@@ -348,7 +367,7 @@ h3.my-profession{
     position: absolute;
     width: 120%;
     height: 120%;
-    background: #ff8000;
+    background: #EE5A24;
     transform: rotate(45deg);
     left: -110%;
     top: 90%;
@@ -375,14 +394,14 @@ h3.my-profession{
     filter: drop-shadow(-3px 2px 3px black);
 }
 .service-div div:hover .icon{
-    background-color: burlywood;
+    background-color: #EE5A24;
 
 }
 .service-div i{
     font-size: 20px;
     line-height: 40px;
     text-align: center;
-    color: burlywood;
+    color: #EE5A24;
     position: absolute;
     top: 0;
     left: 0;
@@ -425,6 +444,9 @@ h3.my-profession{
     text-shadow: -3px 2px 4px black;
 }
 /*------------------------------------------------project----------------------------*/
+.project{
+
+}
 .project h4{
   margin-bottom: 30px;
 }

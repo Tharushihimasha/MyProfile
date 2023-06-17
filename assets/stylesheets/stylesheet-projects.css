@@ -22,13 +22,18 @@ h1{
 }
 .basics div{
     width: 250px;
-    height: 50px;
+    height: 220px;
     border: 2px solid red;
     margin-left: 100px;
     margin-bottom: 30px;
     position: relative;
     background: #2c3034;
 }
+.basics div a img{
+    width: 250px;
+    height: 170px;
+}
+
 .basics div>a{
     text-align: center;
     color: #bebebf;
