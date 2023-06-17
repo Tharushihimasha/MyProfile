@@ -1,4 +1,4 @@
-@media all and (max-width: 1440px) and (min-width: 1024px){
+@media all and (max-width: 1024px){
     h3.hello{
         font-size: 28px;
         margin-top: 30px;
@@ -40,5 +40,21 @@
         border-top: 7px solid burlywood;
         left: 2px;
         top: -13px;
+    }
+}
+@media all and (max-width: 768px){
+    header {
+        height: 120px;
+    }
+    .nav{
+        right: 90px;
+        top: 85px;
+    }
+    .header .logo{
+        position: absolute;
+        top: 9px;
+        left: 320px;
+        font-size: 20px;
+        text-transform: capitalize;
     }
 }
