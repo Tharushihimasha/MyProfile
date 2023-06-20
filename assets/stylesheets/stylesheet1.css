@@ -151,7 +151,8 @@ h3.my-profession{
 .home .home-img img{
     height: 400px;
     width: 400px;
-    border-radius: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius:30px;
 }
 .social-media{
     position: relative;
