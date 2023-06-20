@@ -52,6 +52,45 @@
         height: 180px;
         margin-left: 120px;
     }
+    .my-details li{
+        font-size: 18px;
+    }
+    .contact-us{
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .footer .logo{
+        top: 5px;
+        left: 450px;
+        font-size: 5px;
+    }
+    .footer .logo a{
+        font-size: 30px;
+    }
+    .footer .logo a span{
+        font-family: "Calibri Light" ,cursive;
+        font-size: 50px;
+    }
+    .footer .logo a::before{
+        width: 20px;
+        height: 20px;
+        border-top: 4px solid #EE5A24;
+        border-left: 4px solid #EE5A24;
+        left: 2px;
+        top: -3px;
+    }
+    .footer .logo a::after{
+        width: 20px;
+        height: 20px;
+        border-right: 4px solid #EE5A24;
+        border-bottom: 4px solid #EE5A24;
+        right: 0;
+        bottom: 3px;
+    }
+    .footer .logo h5{
+        font-size: 15px;
+        margin-top: 10px;
+    }
 
 }
 @media all and (max-width: 768px){
