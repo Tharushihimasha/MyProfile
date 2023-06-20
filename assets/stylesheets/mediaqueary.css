@@ -28,19 +28,31 @@
     .home-img::after{
         height: 70px;
         width: 70px;
-        border-bottom: 7px solid red;
-        border-right: 7px solid red;
+        border-bottom: 7px solid #EE5A24;
+        border-right: 7px solid #EE5A24;
         right: 3px;
         bottom: -10px;
     }
     .home-img::before{
         height: 70px;
         width: 70px;
-        border-left: 7px solid burlywood;
-        border-top: 7px solid burlywood;
+        border-left: 7px solid #EE5A24;
+        border-top: 7px solid #EE5A24;
         left: 2px;
         top: -13px;
     }
+    .service .service-div{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        margin-right: 250px;
+        padding-right: 100px;
+    }
+    .service-div div{
+        width: 180px;
+        height: 180px;
+        margin-left: 120px;
+    }
+
 }
 @media all and (max-width: 768px){
     header {
