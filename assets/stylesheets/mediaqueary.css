@@ -159,4 +159,17 @@
         margin-left: 30px;
         padding-right: 30px;
     }
+    .contact{
+        flex-direction: column;
+    }
+    .my-details{
+        margin-left: 200px;
+        margin-top: 60px;
+    }
+    .contact-us{
+        margin-top: 30px;
+    }
+    .footer .logo{
+        left: 320px;
+    }
 }
