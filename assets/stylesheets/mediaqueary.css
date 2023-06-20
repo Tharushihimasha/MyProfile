@@ -1,3 +1,19 @@
+@media all and (max-width: 1440px) and (min-width: 1024px){
+    h3.hello{
+        font-size: 40px;
+    }
+    h3.hello span{
+        font-size: 45px;
+
+    }
+    h3.my-profession{
+        font-size: 40px;
+    }
+    .home-page p{
+        font-size: 16px;
+    }
+}
+
 @media all and (max-width: 1024px) and (min-width: 768px){
     h3.hello{
         font-size: 28px;
