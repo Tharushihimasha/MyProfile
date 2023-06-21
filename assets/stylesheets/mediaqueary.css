@@ -124,7 +124,7 @@
     }
 
 }
-@media all and (max-width: 768px) and (min-width: 425px){
+@media all and (max-width: 768px){
     header {
         height: 120px;
     }
@@ -203,9 +203,42 @@
         left: 320px;
     }
 }
-@media all and (max-width: 425px) and (min-width: 375px){
+@media all and (max-width: 426px){
+
     .menu{
         display: block;
-        background-color: #ff253a;
+        font-size: 25px;
+        left: 380px;
+
+    }
+    .header .logo{
+        position: absolute;
+        top: 12px;
+        left: 10px;
+    }
+    .home-img{
+        display: none;
+    }
+    h3.hello{
+        font-size: 20px;
+    }
+    h3.hello span{
+        font-size: 31px;
+    }
+    h3.my-profession{
+        font-size: 27px;
+    }
+    .home-page p{
+        font-size: 10px;
+    }
+    .social-media  {
+        width: 35px;
+        height: 35px;
+        left: 30px;
+    }
+    .btn{
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 60px;
     }
 }
