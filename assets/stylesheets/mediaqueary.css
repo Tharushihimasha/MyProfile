@@ -204,7 +204,6 @@
     }
 }
 @media all and (max-width: 426px){
-
     .menu{
         display: block;
         font-size: 25px;
@@ -241,6 +240,17 @@
         font-weight: 500;
         margin-left: 60px;
     }
+    .about{
+        flex-direction: column;
+    }
+    .about-img{
+        align-items: center;
+    }
+    .my-content{
+        margin-top: 30px;
+        margin-right: 150px;
+    }
+
 }
 @media all and (max-width: 376px){
     .menu{
@@ -263,6 +273,15 @@
     }
     .btn{
         margin-left: 38px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-img{
+        align-items: center;
+    }
+    .heading{
+        font-size: 40px;
     }
 }
 @media all and (max-width: 321px){
@@ -289,5 +308,11 @@
     }
     .btn{
         margin-left: 38px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-img{
+        align-items: center;
     }
 }
