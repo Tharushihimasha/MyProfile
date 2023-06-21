@@ -250,6 +250,26 @@
         margin-top: 30px;
         margin-right: 150px;
     }
+    .skills{
+        flex-direction: column;
+    }
+    .skills-content{
+        margin-right: 200px;
+    }
+    .skills-menu{
+        padding-bottom: 220px;
+    }
+    .service .service-div{
+        width: 200px;
+        height: 1200px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+    }
+    .service-div div{
+        margin-bottom: 40px;
+        margin-left: -50px;
+    }
+
 
 }
 @media all and (max-width: 376px){
@@ -283,6 +303,14 @@
     .heading{
         font-size: 40px;
     }
+    .skills-img {
+        width: 400px;
+        height: 150px;
+    }
+    .service-div div{
+        margin-left: -70px;
+    }
+
 }
 @media all and (max-width: 321px){
     .menu{
@@ -315,4 +343,8 @@
     .about-img{
         align-items: center;
     }
+    .service-div div{
+        margin-left: -100px;
+    }
+
 }
