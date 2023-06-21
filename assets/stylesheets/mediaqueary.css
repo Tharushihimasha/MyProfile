@@ -203,74 +203,92 @@
         left: 320px;
     }
 }
-@media all and (max-width: 426px){
-    .menu{
+@media all and (max-width: 426px) {
+    .menu {
         display: block;
         font-size: 25px;
         left: 380px;
 
     }
-    .header .logo{
+
+    .header .logo {
         position: absolute;
         top: 12px;
         left: 10px;
     }
-    .home-img{
+
+    .home-img {
         display: none;
     }
-    h3.hello{
+
+    h3.hello {
         font-size: 20px;
     }
-    h3.hello span{
+
+    h3.hello span {
         font-size: 31px;
     }
-    h3.my-profession{
+
+    h3.my-profession {
         font-size: 27px;
     }
-    .home-page p{
+
+    .home-page p {
         font-size: 10px;
     }
-    .social-media  {
+
+    .social-media {
         width: 35px;
         height: 35px;
         left: 30px;
     }
-    .btn{
+
+    .btn {
         font-size: 14px;
         font-weight: 500;
         margin-left: 60px;
     }
-    .about{
+
+    .about {
         flex-direction: column;
     }
-    .about-img{
+
+    .about-img {
         align-items: center;
     }
-    .my-content{
+
+    .my-content {
         margin-top: 30px;
         margin-right: 150px;
     }
-    .skills{
+
+    .skills {
         flex-direction: column;
     }
-    .skills-content{
+
+    .skills-content {
         margin-right: 200px;
     }
-    .skills-menu{
+
+    .skills-menu {
         padding-bottom: 220px;
     }
-    .service .service-div{
+
+    .service .service-div {
         width: 200px;
         height: 1200px;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(6,1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
     }
-    .service-div div{
+
+    .service-div div {
         margin-bottom: 40px;
         margin-left: -50px;
     }
 
-
+    .project-container {
+        flex-direction: column;
+    }
 }
 @media all and (max-width: 376px){
     .menu{
