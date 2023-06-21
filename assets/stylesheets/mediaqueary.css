@@ -242,3 +242,52 @@
         margin-left: 60px;
     }
 }
+@media all and (max-width: 376px){
+    .menu{
+       /* display: block;*/
+        font-size: 25px;
+        left: 340px;
+    }
+    h3.hello span{
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    h3.my-profession{
+        font-size: 25px;
+    }
+    .home-page p{
+        font-size: 12px;
+    }
+    .social-media  {
+        left: 10px;
+    }
+    .btn{
+        margin-left: 38px;
+    }
+}
+@media all and (max-width: 321px){
+    .menu{
+      /*  display: block;*/
+        left: 280px;
+    }
+    h3.hello{
+        font-size: 22px;
+    }
+    h3.hello span{
+        margin-top: 10px;
+        font-size: 35px;
+    }
+    h3.my-profession{
+        font-size: 22px;
+    }
+    .home-page p{
+        font-size: 10px;
+    }
+    .social-media {
+        width: 31px;
+        height: 31px;
+    }
+    .btn{
+        margin-left: 38px;
+    }
+}
