@@ -20,6 +20,12 @@
     .home-page p{
         font-size: 16px;
     }
+    .home .home-img img{
+        height: 500px;
+        width: 550px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius:30px;
+    }
 }
 
 @media all and (max-width: 1024px) and (min-width: 768px){
@@ -118,7 +124,7 @@
     }
 
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) and (min-width: 425px){
     header {
         height: 120px;
     }
@@ -195,5 +201,11 @@
     }
     .footer .logo{
         left: 320px;
+    }
+}
+@media all and (max-width: 425px) and (min-width: 375px){
+    .menu{
+        display: block;
+        background-color: #ff253a;
     }
 }
