@@ -289,6 +289,16 @@
     .project-container {
         flex-direction: column;
     }
+    .contact-us{
+        margin-right: 70px;
+    }
+    .send i{
+        padding-left: 350px;
+        padding-bottom: 25px;
+    }
+    .footer .logo{
+        left: 150px;
+    }
 }
 @media all and (max-width: 376px){
     .menu{
