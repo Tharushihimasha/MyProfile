@@ -73,15 +73,15 @@
         top: -13px;
     }
     .service .service-div{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
         margin-right: 250px;
-        padding-right: 100px;
+        padding-right: 200px;
     }
     .service-div div{
-        width: 180px;
-        height: 180px;
-        margin-left: 120px;
+        width: 200px;
+        height: 200px;
+        margin-left: 40px;
     }
     .my-details li{
         font-size: 18px;
@@ -185,9 +185,14 @@
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3,1fr);
     }
+    .service-div{
+        ;
+        padding-left: -80px;
+    }
     .service-div div{
-        margin-left: 30px;
-        padding-right: 30px;
+
+        margin-left: 20px;
+        padding-right: -10px;
     }
     .contact{
         flex-direction: column;
@@ -210,7 +215,26 @@
         left: 380px;
 
     }
-
+    .nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 12px;
+        background-color: black;
+        border-top: 10px solid black;
+        box-shadow: 1px 2px #EE5A24;
+    }
+    .nav li+a{
+        display: block;
+        font-size: 10px;
+        margin: 10px;
+    }
+    /*.nav li> a{
+        font-size: 12px;
+        padding-right: 5px;
+    }
+*/
     .header .logo {
         position: absolute;
         top: 12px;
@@ -273,7 +297,9 @@
     .skills-menu {
         padding-bottom: 220px;
     }
-
+    .service{
+        min-height: 30vh;
+    }
     .service .service-div {
         width: 200px;
         height: 1200px;
