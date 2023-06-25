@@ -22,7 +22,7 @@ h1{
 }
 .basics div{
     width: 250px;
-    height: 220px;
+    height: 215px;
     border: 2px solid red;
     margin-left: 100px;
     margin-bottom: 30px;
@@ -45,12 +45,16 @@ h1{
 }
 .animation div{
     width: 250px;
-    height: 50px;
+    height: 215px;
     border: 2px solid red;
     margin-left: 200px;
     margin-bottom: 30px;
     position: relative;
     background: #2c3034;
+}
+.animation div a img{
+    width: 250px;
+    height: 170px;
 }
 .animation div>a{
     text-align: center;
