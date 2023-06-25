@@ -364,6 +364,9 @@
     .service-div div{
         margin-left: -70px;
     }
+    .footer .logo{
+        left: 100px;
+    }
 
 }
 @media all and (max-width: 321px){
@@ -399,6 +402,9 @@
     }
     .service-div div{
         margin-left: -100px;
+    }
+    .footer .logo{
+        left: 70px;
     }
 
 }
