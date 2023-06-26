@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/stylesheets/stylesheet1.css">
     <link rel="stylesheet" href="assets/fonts/css/all.css">
     <link rel="stylesheet" href="assets/stylesheets/mediaqueary.css">
+    <link rel="stylesheet" href="https://docs.google.com/spreadsheets/d/18X7ssEYbb5Pyp2zae97mgesgbnVa15nFuVTGcQggjx8/edit#gid=0">
 </head>
 <body>
 <header>
@@ -157,26 +158,34 @@
     <!-- project design -->
 
     <section id="project">
-        <h1 class="service-header">Project</h1>
+        <!--<h1 class="service-header">What I Provide</h1>-->
         <div class="project-container">
             <div class="project-box">
-                <img src="assets/images/image-5.jpeg" alt="">
+                <img src="assets/images/web-page-design-preview-69936.jpg" alt="">
                 <div class="project-layer">
-                    <h4>Projects</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim exercitationem nam voluptatibus?</p>
+                    <h1>Projects</h1>
                     <a href="index2.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
             <div class="project-box">
-                <img src="assets/images/The-Learning-Continuity-Plan.png" alt="">
+                <img src="assets/images/gno-web-design-about-page.png" alt="">
                 <div class="project-layer">
-                    <h4>Assignments</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim exercitationem nam voluptatibus?</p>
+                    <h1>Assignments</h1>
                     <a href="index1.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+
+            <div class="project-box">
+                <img src="assets/images/web-pos-dashboard.webp" alt="">
+                <div class="project-layer">
+                    <h1>POS System</h1>
+                    <a href="assignments/js/POS_System/js-pos/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
         </div>
+
     </section>
 
     <!-- contact design -->
@@ -198,20 +207,17 @@
         </div>
         <div class="contact-us">
             <h1>Tell me about your project.</h1>
-            <form class="form-div">
+            <form class="form-div" onsubmit="sendEmail(); reset(); return false;">
                 <div class="input-box">
-                    <input type="text" id="first-name" placeholder="First Name">
-                    <input type="text" id="last-name" placeholder="Last Name">
+                    <input type="text" id="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" placeholder="Last Name" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" id="e-mail" placeholder="E-mail">
-                    <input type="number" id="mobile-number" placeholder="Mobile Number">
+                    <input type="text" id="e-mail" placeholder="E-mail" required>
+                    <input type="number" id="mobile-number" placeholder="Mobile Number" required>
                 </div>
-                <textarea cols="30" rows="10" id="message" placeholder="Your Message"></textarea>
-               <!-- <input type="submit" value="Send Message" class="btn">-->
-                <div class="send">
-                    <a href="Table.html"><i class="fa-solid fa-paper-plane" id="send"></i></a>
-                </div>
+                <textarea cols="30" rows="10" id="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn" id="send">
 
             </form>
         </div>
@@ -233,5 +239,21 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script src="assets/stylesheets/script.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "username",
+            Password : "password",
+            To : '',
+            From : "",
+            Subject : "subject",
+            Body : "Hello i am user"
+        }).then(
+            message => alert(message)
+        );
+    }
+</script>
 </body>
 </html>
