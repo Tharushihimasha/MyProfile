@@ -754,7 +754,13 @@ h3.my-profession{
 .contact-us form .input-box input{
     width: 49%;
 }
-
+#send{
+    width: 90px;
+    height: 40px;
+    background-color: #EE5A24;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 /*----------------------------------------------footer------------------------------*/
 .footer{

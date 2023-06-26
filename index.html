@@ -52,7 +52,7 @@
                 <div class="social-media"><a href="https://www.linkedin.com/in/tharushi-himasha-46a91b265"><i class="fa-brands fa-linkedin"></i></a></div>
                 <div class="social-media"><a href="https://github.com/Tharushihimasha"><i class="fa-brands fa-github"></i></a></div>
             </div>
-            <a href="#hire me" class="btn hire me">More About Me</a>
+            <a href="#About" class="btn hire me">More About Me</a>
         </div>
         <div class="home-img">
             <img src="assets/images/WhatsApp Image 2023-02-16 at 11.12.49 AM.jpg" width="200"
@@ -177,7 +177,7 @@
             </div>
 
             <div class="project-box">
-                <img src="assets/images/web-pos-dashboard.webp" alt="">
+                <img src="assets/images/image2-1024x591.png" alt="">
                 <div class="project-layer">
                     <h1>POS System</h1>
                     <a href="assignments/js/POS_System/js-pos/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -207,17 +207,17 @@
         </div>
         <div class="contact-us">
             <h1>Tell me about your project.</h1>
-            <form class="form-div" onsubmit="sendEmail(); reset(); return false;">
-                <div class="input-box">
-                    <input type="text" id="first-name" placeholder="First Name" required>
-                    <input type="text" id="last-name" placeholder="Last Name" required>
+            <form class="form-div">
+                <div class="input-box" name="contact.us">
+                    <input type="text" name="first name" id="first-name" placeholder="First Name" >
+                    <input type="text" name="last name" id="last-name" placeholder="Last Name">
                 </div>
                 <div class="input-box">
-                    <input type="text" id="e-mail" placeholder="E-mail" required>
-                    <input type="number" id="mobile-number" placeholder="Mobile Number" required>
+                    <input type="text" name="e-mail" id="e-mail" placeholder="E-mail">
+                    <input type="number" name="mobile-number" id="mobile-number" placeholder="Mobile Number">
                 </div>
-                <textarea cols="30" rows="10" id="message" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message" class="btn" id="send">
+                <textarea cols="30" rows="10" name="message" id="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message"  id="send">
 
             </form>
         </div>
@@ -241,19 +241,18 @@
 <script src="assets/stylesheets/script.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    function sendEmail(){
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "username",
-            Password : "password",
-            To : '',
-            From : "",
-            Subject : "subject",
-            Body : "Hello i am user"
-        }).then(
-            message => alert(message)
-        );
-    }
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzng-Rub8-8KjnNeoeICGMCA5eXoM00l3FhriLardmwVJpxMnqUhwF4F91rsA-zcZWi/exec'
+    const form = document.forms['contact.us']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                form.reset()
+                alert('Success!')
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
 </script>
 </body>
 </html>
