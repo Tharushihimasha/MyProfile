@@ -209,13 +209,23 @@
     }
 }
 @media all and (max-width: 426px) {
+    .header{
+        height: 100px;
+    }
+    .header .logo{
+        position: absolute;
+        top: 9px;
+        left: 320px;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
     .menu {
         display: block;
         font-size: 25px;
         left: 380px;
 
     }
-    .nav-bar{
+    .nav{
         height: 0;
         position: absolute;
         top: 80px;
@@ -227,16 +237,19 @@
         transition: 0.2s;
         overflow: hidden;
     }
-    .nav-bar .active{
-        height: 350px;
+    .nav.active{
+        height: 300px;
     }
     .nav li{
         display: block;
         width: fit-content;
         margin-bottom: 20px;
-        padding-right: 80px;
+        padding-right: 30px;
         transition: 0.5s;
-       /* opacity: 0;*/
+        opacity: 0;
+    }
+    .nav.active li{
+        opacity: 1;
     }
     .nav li+a{
         display: block;
