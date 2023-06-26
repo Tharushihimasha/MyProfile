@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="assets/stylesheets/stylesheet1.css">
     <link rel="stylesheet" href="assets/fonts/css/all.css">
     <link rel="stylesheet" href="assets/stylesheets/mediaqueary.css">
-   <!-- <link rel="stylesheet" href=assets/stylesheets/normalize.css"">-->
 </head>
 <body>
 <header>
@@ -20,13 +19,15 @@
         <div class="menu">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <ul class="nav">
-            <li><a class="navigation" href="#Home"><i class="fa-solid fa-house"></i>Home</a></li>
-            <li><a class="navigation" href="#About"><i class="fa-solid fa-address-card"></i>About Me</a></li>
-            <li><a class="navigation" href="#service"><i class="fa-solid fa-earth-americas"></i>Services</a></li>
-            <li><a class="navigation" href="#project"><i class="fa-solid fa-list-check"></i>Projects</a></li>
-            <li><a class="navigation" href="#contact"><i class="fa-solid fa-phone"></i>Contact</a></li>
-        </ul>
+        <div class="nav-bar">
+            <ul class="nav">
+                <li><a class="navigation" href="#Home" id="Active"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a class="navigation" href="#About"><i class="fa-solid fa-address-card"></i>About Me</a></li>
+                <li><a class="navigation" href="#service"><i class="fa-solid fa-earth-americas"></i>Services</a></li>
+                <li><a class="navigation" href="#project"><i class="fa-solid fa-list-check"></i>Projects</a></li>
+                <li><a class="navigation" href="#contact"><i class="fa-solid fa-phone"></i>Contact</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 
@@ -136,12 +137,12 @@
         <h1 class="service-header">What I Provide</h1>
         <div class="service-div">
             <div>
-                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <h3>Full Stack Development</h3>
+                <div class="icon"><i class="fa-solid fa-a"></i></div>
+                <h3>Software Development</h3>
                 <p>All standalone software development with Java, JavaFx, MySQl,SpringBoot and Hibernate.</p>
             </div>
             <div>
-                <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+                <div class="icon"><i class="fa-solid fa-palette"></i></i></div>
                 <h3>UI/UX Designing</h3>
                 <p>Mobile apps, web sites design</p>
             </div>
@@ -230,28 +231,6 @@
 
   <!--scroll reveal-->
 <script src="https://unpkg.com/scrollreveal"></script>
-<!--<script>
-    var Student =[];
-
-    $('#send').click(function (){
-        let Firstname=$('#first-name').val();
-        let Lastname=$('#last-name').val();
-        let Email=$('#e-mail').val();
-        let MobileNumber=$('#mobile-number').val();
-        let Message=$('#message').val();
-
-        var studentObject={
-            firstname: Firstname,
-            lastname:Lastname,
-            email : Email,
-            mobile : MobileNumber,
-            message:Message
-        }
-        Student.push(studentObject);
-        console.log(Student);
-    });
-</script>-->
-<!--typed js-->
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script src="assets/stylesheets/script.js"></script>
 </body>

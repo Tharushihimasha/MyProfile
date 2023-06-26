@@ -8,6 +8,13 @@
     border: none;
     outline: none;
 }
+
+/*::-webkit-scrollbar{
+    width: 5px;
+   !* height: 5px;*!
+    background-color: #EE5A24;
+}*/
+
 header {
     width: 100%;
     height: 70px;
@@ -94,8 +101,9 @@ section{
     top: 0;
     right: 0;
 }
-.header.sticky{
-    border-bottom: 100px solid black;
+#Active{
+    border-radius: 100px;
+    border: 1px solid #EE5A24;
 }
 
 /*---------------------------------------Home----------------------------------*/
